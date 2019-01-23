@@ -2,10 +2,13 @@ data(iris)
 View(iris)
 
 #Get all rows of Species ‘versicolor’ in a new data frame. Call this data frame: ‘iris.vers’
+iris.vers <- iris[iris$Species == "versicolor", ]
 
 #Get a vector called ‘sepal.dif’ with the difference between ‘Sepal.Length’ and ‘Sepal.Width’ of ‘versicolor’ plants.
-
+sepal.dif <- iris.vers$Sepal.Length - iris.vers$Sepal.Width
+  
 #Add ‘iris.vers’ with the new column ‘sepal.dif’.
+iris.vers$sepal.diff <- sepal.dif
 
 #filter for all data of Species ‘virginica’ with a ‘Sepal.Width’ of greater than 3.5.
 
